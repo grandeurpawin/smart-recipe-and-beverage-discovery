@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipe Details | Smart Recipe</title>
+    <meta name="author" content="Grandeur Pawin" />
+    <meta
+      name="description"
+      content="View detailed meal information, ingredients, measurements, and cooking instructions."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/base.css" />
+    <script type="module" src="./js/main.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="main-navigation" aria-label="Main navigation">
+        <a
+          class="logo"
+          aria-label="Smart Recipe and Beverage Discovery home page"
+          href="index.html"
+        >
+          <img
+            src="images/smartLogo.png"
+            alt="Smart Recipe and Beverage Discovery"
+          />
+        </a>
+        <button
+          type="button"
+          class="menu-button"
+          id="menuButton"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="navLinks"
+        >
+          &#9776;
+        </button>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="#meals">Meals</a></li>
+          <li><a href="#drinks">Drinks</a></li>
+          <li><a href="#categories">Categories</a></li>
+          <li><a href="#favorites">Favorites</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <header>
+          <p class="section-eyebrow" id="recipeCategory"></p>
+          <h1 id="recipeTitle">Recipe Details</h1>
+          <p id="recipeCuisine"></p>
+        </header>
+
+        <div class="recipe-image-container">
+          <img id="recipeImage" src="" alt="" />
+        </div>
+        <div class="recipe-actions">
+          <button type="button" id="favoriteMealButton" aria-pressed="false">
+            Add to Favorites
+          </button>
+        </div>
+        <div class="recipe-information">
+          <section class="recipe-section" aria-labelledby="ingredientsHeading">
+            <h2 id="ingredientsHeading">Ingredients</h2>
+            <ul class="ingredient-list" id="ingredientList"></ul>
+          </section>
+          <section class="recipe-section" aria-labelledby="instructionsHeading">
+            <h2 id="instructionsHeading">Instructions</h2>
+            <div id="recipeInstructions"></div>
+          </section>
+        </div>
+      </section>
+      <div
+        class="status-message"
+        id="recipeStatus"
+        role="status"
+        aria-live="polite"
+      ></div>
+    </main>
+    <footer id="site-footer">
+      <p>&copy; 2026 Smart Recipe & Beverage Discovery</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Samrt Recipe and Beverage Discovery</title>
+    <meta name="author" content="Grandeur Pawin" />
+    <meta
+      name="description"
+      content="Discover delicious meals and beverages based on your tastes, ingredients, cuisines, and categories."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/base.css" />
+    <script type="module" src="./js/main.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="main-navigation" aria-label="Main navigation">
+        <a
+          class="logo"
+          aria-label="Smart Recipe and Beverage Discovery home page"
+          href="index.html"
+        >
+          <img
+            src="images/smartLogo.png"
+            alt="Smart Recipe and Beverage Discovery"
+          />
+        </a>
+        <button
+          type="button"
+          class="menu-button"
+          id="menuButton"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="navLinks"
+        >
+          &#9776;
+        </button>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="#meals">Meals</a></li>
+          <li><a href="#drinks">Drinks</a></li>
+          <li><a href="#categories">Categories</a></li>
+          <li><a href="#favorites">Favorites</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-content">
+          <p class="hero-eyebrow">Recipe and Beverage Discovery</p>
+          <h1>Discover Something Delicious</h1>
+          <p class="hero-description">
+            Find meals and beverages based on your tastes, available
+            ingredients, cuisines, and categories.
+          </p>
+
+          <form class="search-form" id="mealSearchForm">
+            <label for="mealSearch">Search for a Meal</label>
+            <input
+              type="search"
+              id="mealSearch"
+              name="mealSearch"
+              placeholder="Search meals..."
+              autocomplete="off"
+              required
+            />
+            <button type="submit">Search Meals</button>
+          </form>
+
+          <form class="search-form" id="cocktailSearchForm">
+            <label for="cocktailSearch">Search for a Drink</label>
+            <input
+              type="search"
+              id="cocktailSearch"
+              name="cocktailSearch"
+              placeholder="Search cocktails..."
+              autocomplete="off"
+              required
+            />
+            <button type="submit">Search Drinks</button>
+          </form>
+
+          <div id="randomActions">
+            <button type="button" id="randomMealButton">Random Meal</button>
+            <button type="button" id="randomCocktailButton">
+              Random Drink
+            </button>
+          </div>
+        </div>
+        <div id="heroImage" aria-hidden="true"></div>
+      </section>
+
+      <section
+        class="content-section"
+        id="meals"
+        aria-labelledby="mealsHeading"
+      >
+        <header class="section-header">
+          <p class="section-eyebrow">Explore Meals</p>
+          <h2 id="mealsHeading">Find Your Next Meal</h2>
+        </header>
+        <div
+          class="status-message"
+          id="mealStatus"
+          role="status"
+          aria-live="polite"
+        ></div>
+        <div class="results-grid" id="mealResults"></div>
+      </section>
+
+      <section
+        class="content-section"
+        id="cocktails"
+        aria-labelledby="cocktailsHeading"
+      >
+        <header>
+          <p class="section-eyebrow">Explore Drinks</p>
+          <h2 id="cocktailsHeading">Discover a Drink</h2>
+        </header>
+
+        <div
+          class="status-message"
+          id="cocktailStatus"
+          role="status"
+          aria-live="polite"
+        ></div>
+        <div class="results-grid" id="cocktailResults"></div>
+      </section>
+
+      <section
+        class="content-section"
+        id="categories"
+        aria-labelledby="categoriesHeading"
+      >
+        <header class="section-header">
+          <p class="section-eyebrow">Browse</p>
+          <h2 id="categoriesHeading">Explore by Category or Cuisine</h2>
+        </header>
+
+        <div class="category-group">
+          <h3>Meal Categories</h3>
+          <div class="category-list" id="mealCategories">
+            <button type="button" data-category="Chicken">Chicken</button>
+            <button type="button" data-category="Seafood">Seafood</button>
+            <button type="button" data-category="Dessert">Dessert</button>
+            <button type="button" data-category="Vegetarian">Vegetarian</button>
+            <button type="button" data-category="Beef">Beef</button>
+            <button type="button" data-category="Pasta">Pasta</button>
+          </div>
+        </div>
+
+        <div class="category-group">
+          <h3>Cuisines</h3>
+          <div class="category-list" id="cuisines">
+            <button type="button" data-cuisine="Italian">Italian</button>
+            <button type="button" data-cuisine="Japanese">Japanese</button>
+            <button type="button" data-cuisine="Mexican">Mexican</button>
+            <button type="button" data-cuisine="Indian">Indian</button>
+            <button type="button" data-cuisine="Chinese">Chines</button>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="content-section"
+        id="favorites"
+        aria-labelledby="favoritesHeading"
+      >
+        <header class="section-header">
+          <p class="section-eyebrow">Your Collection</p>
+          <h2 id="favoritesHeading">Favorites</h2>
+        </header>
+
+        <div class="favorite-group">
+          <h3>Favorite Meals</h3>
+
+          <div class="results-grid" id="favoriteMealResults"></div>
+        </div>
+
+        <div class="favorite-group">
+          <h3>Favorite Drinks</h3>
+          <div class="results-grid" id="favoriteCocktailResults"></div>
+        </div>
+      </section>
+
+      <section
+        class="content-section"
+        id="recentlyViewed"
+        aria-labelledby="recentHeading"
+      >
+        <header class="section-header">
+          <p class="section-eyebrow">Your History</p>
+          <h2 id="recentHeading">Recently Viewed</h2>
+        </header>
+        <div class="results-grid" id="recentResults"></div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <p>&copy; 2026 Smart Recipe & Beverage Discovery</p>
+    </footer>
+  </body>
+</html>
