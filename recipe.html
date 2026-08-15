@@ -9,6 +9,7 @@
       name="description"
       content="View detailed meal information, ingredients, measurements, and cooking instructions."
     />
+    <link rel="icon" href="images/smartLogo.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,7 +19,7 @@
     <link rel="stylesheet" href="./css/base.css" />
     <script type="module" src="./js/main.js"></script>
   </head>
-  <body>
+  <body data-page="recipe">
     <header class="site-header">
       <nav class="main-navigation" aria-label="Main navigation">
         <a
@@ -42,16 +43,16 @@
           &#9776;
         </button>
         <ul class="nav-links" id="navLinks">
-          <li><a href="index.html" aria-current="page">Home</a></li>
-          <li><a href="#meals">Meals</a></li>
-          <li><a href="#drinks">Drinks</a></li>
-          <li><a href="#categories">Categories</a></li>
-          <li><a href="#favorites">Favorites</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#meals">Meals</a></li>
+          <li><a href="index.html#cocktails">Drinks</a></li>
+          <li><a href="index.html#categories">Categories</a></li>
+          <li><a href="index.html#favorites">Favorites</a></li>
         </ul>
       </nav>
     </header>
     <main>
-      <section>
+      <section class="recipe-detail" aria-labelledby="recipeTitle">
         <header>
           <p class="section-eyebrow" id="recipeCategory"></p>
           <h1 id="recipeTitle">Recipe Details</h1>

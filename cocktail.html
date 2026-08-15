@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cocktail Details | Beverage Discovery Recipe</title>
+    <meta name="author" content="Grandeur Pawin" />
+    <meta
+      name="description"
+      content="View detailed cocktail information, ingredients, measurements, and preparation instructions."
+    />
+    <link rel="icon" href="images/smartLogo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/base.css" />
+    <script type="module" src="./js/main.js"></script>
+  </head>
+  <body data-page="cocktail">
+    <header class="site-header">
+      <nav class="main-navigation" aria-label="Main navigation">
+        <a
+          class="logo"
+          aria-label="Smart Recipe and Beverage Discovery home page"
+          href="index.html"
+        >
+          <img
+            src="images/smartLogo.png"
+            alt="Smart Recipe and Beverage Discovery"
+          />
+        </a>
+        <button
+          type="button"
+          class="menu-button"
+          id="menuButton"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="navLinks"
+        >
+          &#9776;
+        </button>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#meals">Meals</a></li>
+          <li><a href="index.html#cocktails">Drinks</a></li>
+          <li><a href="index.html#categories">Categories</a></li>
+          <li><a href="index.html#favorites">Favorites</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="cocktail-detail" aria-labelledby="cocktailTitle">
+        <header class="cocktail-header">
+          <p class="section-eyebrow" id="cocktailCategory"></p>
+          <h1 id="cocktailTitle">Cocktail Details</h1>
+          <p id="cocktailType"></p>
+          <p id="cocktailGlass"></p>
+        </header>
+
+        <div class="cocktail-image-container">
+          <img id="cocktailImage" src="" alt="" />
+        </div>
+
+        <div class="cocktail-actions">
+          <button
+            type="button"
+            id="favoriteCocktailButton"
+            aria-pressed="false"
+          >
+            Add To Favorites
+          </button>
+        </div>
+
+        <div class="cocktail-information">
+          <section
+            class="cocktail-section"
+            aria-labelledby="cocktailIngredientsHeading"
+          >
+            <h2 id="cocktailIngredientsHeading">Ingredients</h2>
+            <ul class="ingredient-list" id="cocktailIngredientsList"></ul>
+          </section>
+
+          <section
+            class="cocktail-section"
+            aria-labelledby="cocktailInstructionsHeading"
+          >
+            <h2 id="cocktailInstructionsHeading">Instructions</h2>
+            <div id="cocktailInstructions"></div>
+          </section>
+        </div>
+      </section>
+      <div
+        class="status-message"
+        id="cocktailStatus"
+        role="status"
+        aria-live="polite"
+      ></div>
+    </main>
+    <footer class="site-footer">
+      <p>&copy; 2026 Smart Recipe & Beverage Discovery</p>
+    </footer>
+  </body>
+</html>
