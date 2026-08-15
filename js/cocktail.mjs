@@ -175,5 +175,5 @@ export function displayFavoriteCocktails() {
 export async function initializeCocktails() {
   setupCocktailSearch();
   setupRandomCocktail();
-await searchAndDisplayCocktails("Grape")
+  await searchAndDisplayCocktails("Grape");
 }
