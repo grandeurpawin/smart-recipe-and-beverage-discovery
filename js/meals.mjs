@@ -131,6 +131,14 @@ async function loadMealsByCategory(category) {
     if (mealStatus) {
       mealStatus.textContent = `${data.meals.length} ${category} meal(s) found.`;
     }
+    const mealsSection = document.querySelector("#meals");
+
+    if (mealsSection) {
+      mealsSection.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
   } catch (error) {
     console.error("Unable to load category meals", error);
     if (mealStatus) {
@@ -160,6 +168,14 @@ async function loadMealsByCuisine(cuisine) {
 
     if (mealStatus) {
       mealStatus.textContent = `${data.meals.length} ${cuisine} meal(s) found.`;
+    }
+    const mealsSection = document.querySelector("#meals");
+
+    if (mealsSection) {
+      mealsSection.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
     }
   } catch (error) {
     console.error("Unable to load cuisine meals", error);
